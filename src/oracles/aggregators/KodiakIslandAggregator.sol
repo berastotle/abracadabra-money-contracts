@@ -73,7 +73,7 @@ contract KodiakIslandAggregator {
         uint256 totalSupply = island.totalSupply();
 
         uint256 totalValue = normalizedReserve0 * normalizedPriceFeed_token0 + normalizedReserve1 * normalizedPriceFeed_token1;
-        return int256((totalValue * 1e18) / totalSupply);
+        return int256((totalValue) / totalSupply);
     }
 
     function latestRoundData() external view returns (uint80, int256, uint256, uint256, uint80) {
